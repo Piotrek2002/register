@@ -1,5 +1,7 @@
 package com.register.register.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,6 +11,7 @@ public class Teacher {
     private Long id;
 
     @OneToOne(mappedBy = "teacher")
+    @JsonIgnore
     private Class aClass;
     @OneToOne
     @JoinColumn(name = "subject_id")
@@ -57,4 +60,6 @@ public class Teacher {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.register.register.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -9,11 +10,11 @@ public class Class {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany(mappedBy = "aClass")
-    private List<Student> students;
+    private List<Student> students=new ArrayList<>();
     @ManyToMany
     @JoinTable(name = "class_subject")
-    private List<Subject> subjects;
-    private int className;
+    private List<Subject> subjects=new ArrayList<>();
+    private String className;
     @OneToOne
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
@@ -42,11 +43,11 @@ public class Class {
         this.subjects = subjects;
     }
 
-    public int getClassName() {
+    public String getClassName() {
         return className;
     }
 
-    public void setClassName(int className) {
+    public void setClassName(String className) {
         this.className = className;
     }
 
@@ -57,4 +58,6 @@ public class Class {
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
+
+
 }

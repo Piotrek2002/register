@@ -1,0 +1,13 @@
+POST http://localhost:8080/class/add
+Content-Type: application/json
+
+{
+  "className": "3d",
+  "teacherId": 2
+}
+
+###
+GET http://localhost:8080/class/list
+Accept: application/json
+
+###

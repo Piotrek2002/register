@@ -13,7 +13,7 @@ public class Mark {
     @ManyToOne
     private Subject subject;
 
-private int value;
+    private int value;
 
     public Long getId() {
         return id;
@@ -46,4 +46,6 @@ private int value;
     public void setValue(int value) {
         this.value = value;
     }
+
+
 }

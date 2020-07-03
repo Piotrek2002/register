@@ -1,6 +1,7 @@
 package com.register.register.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -9,7 +10,7 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany(mappedBy = "subject")
-    private List<Mark> marks;
+    private List<Mark> marks=new ArrayList<>();
     @OneToOne(mappedBy = "subject")
     private Teacher teacher;
 
@@ -46,4 +47,6 @@ public class Subject {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }

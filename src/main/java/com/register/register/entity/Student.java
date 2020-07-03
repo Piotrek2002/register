@@ -1,6 +1,7 @@
 package com.register.register.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,7 +12,7 @@ public class Student {
     @ManyToOne
     private Class aClass;
     @OneToMany(mappedBy = "student")
-    private List<Mark> marks;
+    private List<Mark> marks=new ArrayList<>();
 
     private String name;
 
@@ -56,4 +57,6 @@ public class Student {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+
 }
