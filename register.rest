@@ -1,9 +1,25 @@
+POST http://localhost:8080/subject/add
+Content-Type: application/json
+
+{
+  "name": "matematyka"
+}
+
+###
+GET http://localhost:8080/subject/find/1
+Accept: application/json
+
+###
+GET http://localhost:8080/subject/list
+Accept: application/json
+
+###
 POST http://localhost:8080/techer/add
 Content-Type: application/json
 
 {
-  "classId": 13,
-  "subjectId": 3,
+  "classId": 14,
+  "subjectId": 5,
   "name": "Jan",
   "surname": "Kowalski"
 }
@@ -45,8 +61,8 @@ POST http://localhost:8080/class/add
 Content-Type: application/json
 
 {
-  "className": "3d",
-  "teacherId": 2
+  "className": "3d"
+
 }
 
 ###
