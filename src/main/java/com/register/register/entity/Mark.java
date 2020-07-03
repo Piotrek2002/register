@@ -13,7 +13,7 @@ public class Mark {
     @ManyToOne
     private Subject subject;
 
-    private int value;
+    private Integer value;
 
     public Long getId() {
         return id;
@@ -39,13 +39,11 @@ public class Mark {
         this.subject = subject;
     }
 
-    public int getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
-
-
 }

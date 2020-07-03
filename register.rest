@@ -1,3 +1,21 @@
+POST http://localhost:8080/mark/add
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "subjectId": 1,
+  "value": 2
+}
+
+###
+GET http://localhost:8080/mark/list
+Accept: application/json
+
+###
+GET http://localhost:8080/mark/find/1
+Accept: application/json
+
+###
 POST http://localhost:8080/subject/add
 Content-Type: application/json
 
