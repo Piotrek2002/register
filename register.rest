@@ -1,3 +1,22 @@
+POST http://localhost:8080/techer/add
+Content-Type: application/json
+
+{
+  "classId": 13,
+  "subjectId": 3,
+  "name": "Jan",
+  "surname": "Kowalski"
+}
+
+###
+GET http://localhost:8080/techer/list
+Accept: application/json
+
+###
+GET http://localhost:8080/techer/find/1
+Accept: application/json
+
+###
 GET http://localhost:8080/student/find/1
 Accept: application/json
 
