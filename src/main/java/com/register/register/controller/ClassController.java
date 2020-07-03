@@ -42,6 +42,14 @@ public class ClassController {
         classRepository.save(aClass);
         return "Utworzono klase";
     }
+    @GetMapping("/find/{id}")
+    @ResponseBody
+    public ClassDTO find(@PathVariable Long id){
+        Class aClass=classRepository.findClassById(id);
+        return classDTO(aClass);
+    }
+
+
     private ClassDTO classDTO(Class aClass){
         ClassDTO classDTO=new ClassDTO();
         classDTO.setId(aClass.getId());

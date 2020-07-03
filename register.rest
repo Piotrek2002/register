@@ -1,3 +1,27 @@
+GET http://localhost:8080/student/find/1
+Accept: application/json
+
+###
+POST http://localhost:8080/student/add
+Content-Type: application/json
+
+
+{
+  "name": "Lidia",
+  "surname": "Kostka",
+  "classId": 10
+}
+
+
+###
+GET http://localhost:8080/student/list
+Accept: application/json
+
+###
+GET http://localhost:8080/class/find/12
+Accept: application/json
+
+###
 POST http://localhost:8080/class/add
 Content-Type: application/json
 
