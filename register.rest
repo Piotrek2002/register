@@ -1,3 +1,11 @@
+GET http://localhost:8080/student/average/1
+Accept: application/json
+
+###
+GET http://localhost:8080/student/average/1/1
+Accept: application/json
+
+###
 POST http://localhost:8080/mark/add
 Content-Type: application/json
 
