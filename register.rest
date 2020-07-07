@@ -59,7 +59,7 @@ GET http://localhost:8080/techer/find/1
 Accept: application/json
 
 ###
-GET http://localhost:8080/student/find/1
+GET http://localhost:8080/student/find/2
 Accept: application/json
 
 ###
@@ -79,7 +79,7 @@ GET http://localhost:8080/student/list
 Accept: application/json
 
 ###
-GET http://localhost:8080/class/find/12
+GET http://localhost:8080/class/find/10
 Accept: application/json
 
 ###

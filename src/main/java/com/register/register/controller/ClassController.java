@@ -1,5 +1,6 @@
 package com.register.register.controller;
 
+import com.register.register.dto.ClassMapper;
 import com.register.register.entity.*;
 import com.register.register.entity.Class;
 import com.register.register.repository.ClassRepository;
@@ -24,7 +25,7 @@ public class ClassController {
     @GetMapping("/list")
     @ResponseBody
     public List<ClassDTO> classList(){
-
+//        return classRepository.findAll().stream().map(ClassMapper.INSTANCE::classToClassDTO).collect(Collectors.toList());
         return classRepository.findAll().stream().map(this::classDTO).collect(Collectors.toList());
     }
     @PostMapping("/add")
@@ -45,8 +46,11 @@ public class ClassController {
     @GetMapping("/find/{id}")
     @ResponseBody
     public ClassDTO find(@PathVariable Long id){
+
+
+
         Class aClass=classRepository.findClassById(id);
-        return classDTO(aClass);
+        return ClassMapper.INSTANCE.classToClassDTO(aClass);
     }
 
 

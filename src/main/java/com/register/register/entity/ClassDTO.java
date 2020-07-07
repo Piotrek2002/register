@@ -8,9 +8,9 @@ public class ClassDTO {
 
     private Long id;
 
-    private List<Long> studentsId=new ArrayList<>();
+    private List<Long> studentsId;
 
-    private List<Long> subjectsId=new ArrayList<>();
+    private List<Long> subjectsId;
     private String className;
 
     private Long teacherId;

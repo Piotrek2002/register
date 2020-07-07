@@ -9,7 +9,7 @@ public class StudentDTO {
 
     private Long ClassId;
 
-    private List<Long> marksId=new ArrayList<>();
+    private List<Long> marksId;
 
     private String name;
 

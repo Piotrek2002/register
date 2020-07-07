@@ -10,7 +10,7 @@ import java.util.List;
 public class SubjectDTO {
 
     private Long id;
-    private List<Long> marksId=new ArrayList<>();
+    private List<Long> marksId;
     private Long teacherId;
     private String name;
 
